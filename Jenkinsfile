@@ -22,7 +22,7 @@ pipeline{
   	}
   	stage ('code-build'){
   		steps{
-  		    sh 'cat/etc/passwd'
+  		    sh 'cat /etc/passwd'
   		}
   	}
   }
