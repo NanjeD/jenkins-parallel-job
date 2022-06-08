@@ -23,12 +23,17 @@ pipeline{
 					echo 'action3'
 				}
 			}
-  		}
+			stage('sub-job4'){
+				steps{
+					echo 'actio4'
+				}
+			}
+		}
   	}
+}
   	stage ('code-build'){
   		steps{
   		    sh 'cat /etc/passwd'
   		}
   	}
   }
-}
