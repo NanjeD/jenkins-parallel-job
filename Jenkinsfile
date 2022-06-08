@@ -3,7 +3,7 @@ pipeline{
   stages{
   	stage('version-control'){
   		steps{
-  			git checkout
+  			checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'good', url: 'https://github.com/NanjeD/jenkins-parallel-job.git']]])
   		}
   	}
   	stage ('parallel-job1'){
@@ -25,9 +25,9 @@ pipeline{
 			}
   		}
   	}
-  	stage ('code build'){
+  	stage ('code-build'){
   		steps{
-  			sh 'cat/etc/passwd'
+  		    sh 'cat /etc/passwd'
   		}
   	}
   }
