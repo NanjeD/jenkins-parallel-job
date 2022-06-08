@@ -20,7 +20,7 @@ pipeline{
   		  }
   		}
   	}
-  	stage ('code build'){
+  	stage ('codebuild'){
   		steps{
   			sh 'cat/etc/passwd'
   		}
