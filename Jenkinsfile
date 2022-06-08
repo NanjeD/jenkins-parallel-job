@@ -20,7 +20,7 @@ pipeline{
   		  }
 			stage('sub-job3'){
 				steps{
-					echo 'action3'
+				  echo 'action3'
 				}
 			}
 			stage('sub-job4'){
